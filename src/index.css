@@ -1,13 +1,15 @@
+@font-face {font-family: "SB Sans Text"; src: url("//db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.eot"); src: url("//db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.woff") format("woff"), url("//db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/c68e21ad1a10803b1ef491fd0392b067.svg#SB Sans Text") format("svg"); }
+@font-face {font-family: "SB Sans Interface"; src: url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.eot"); src: url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.woff") format("woff"), url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/37086b994764dba84b2ee0f1083bfeed.svg#SB Sans Interface") format("svg"); }
+
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 24px;
+  background-color: #F4F4F5;
+  font-family: "SB Sans Text", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
 }
