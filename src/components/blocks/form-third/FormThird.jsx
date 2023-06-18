@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react'
 import GlobalContext from '../../../context/GlobalContext.jsx'
-import { Main as StyledMain, Textarea} from './styles.jsx'
+import { Main as StyledMain, Textarea, TipsWrapper} from './styles.jsx'
 import InputName from '../../elements/input-name/InputName.jsx'
 import { Tip } from '../../elements/tip/Tip.jsx'
 import { ButtonsWrapper } from '../../elements/buttons-wrapper/ButtonsWrapper.jsx'
@@ -44,8 +44,11 @@ export default function FormThird({isThirdStep}) {
         handleChange(e)
         handleTextareaChange(e)
       }}></Textarea>
-      <Tip>Max count: 200</Tip>
-      <Tip>Currentcount:  {symbols}</Tip>
+      <TipsWrapper>
+        <Tip>Tip: максимальное кол-во символов - 200</Tip>
+        <Tip style={{color: 'blue'}}>Символов: {symbols}</Tip>
+      </TipsWrapper>
+
 
       <ButtonsWrapper>
         <StyledButton as='button' type='button' $next={false} onClick={handlePrevStep}>Назад</StyledButton>

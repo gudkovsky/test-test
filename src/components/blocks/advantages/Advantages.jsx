@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, { useContext} from 'react'
 import Input from '../../elements/input/Input.jsx'
 import InputName from '../../elements/input-name/InputName.jsx'
 import { AdvantagesWrapper, Row, Delete } from './styles.jsx'
@@ -12,17 +12,17 @@ export default function Advantages() {
 
   const handleAddAdvantage = (e) => {
     const dataCopy = [...formData.advantages, '']
-    setFormData((prev) => {
-      return { ...prev, advantages: dataCopy}
-    })
+    setFormData((prev) => ({
+      ...prev, advantages: dataCopy
+    }))
   }
 
   const handleDeleteItem = (i) => {
     const dataCopy = [...formData.advantages]
     dataCopy.splice(i, 1)
-    setFormData((prev) => {
-      return { ...prev, advantages: dataCopy}
-    })
+    setFormData((prev) => ({
+       ...prev, advantages: dataCopy
+    }))
   }
 
   const handleAdvantageChange = (evt, i) => {
@@ -30,9 +30,9 @@ export default function Advantages() {
     let dataCopy = [...formData.advantages]
     dataCopy[i] = value
 
-    setFormData((prev) => {
-      return { ...prev, advantages: dataCopy}
-    })
+    setFormData((prev) => ({
+  ...prev, advantages: dataCopy
+    }))
   }
 
   return (

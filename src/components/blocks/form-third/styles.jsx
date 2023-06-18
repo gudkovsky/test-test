@@ -23,3 +23,8 @@ export const Textarea = styled.textarea`
   }
 `
 
+export const TipsWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const StyledInput = styled.input`
   display: flex;
   height: auto;
-  width: 45%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 300px;
   padding: 12px;
   font-family: 'SB Sans Interface', sans-serif;
   font-style: normal;

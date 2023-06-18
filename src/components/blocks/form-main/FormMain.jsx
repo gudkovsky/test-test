@@ -21,17 +21,17 @@ export default function FormMain({isFirstStep}) {
 
   const handleChange = (e) => {
     const {name, value} = e.target
-    setFormData((prev) => {
-      return { ...prev, [name]: value}
-    })
+    setFormData((prev) => ({
+      ...prev, [name]: value
+    }))
   }
 
   const handleSexChoice = (evt) => {
     const name = evt.target.dataset.name
     const value = evt.target.textContent
-    setFormData((prev) => {
-      return { ...prev, [name]: value}
-    })
+    setFormData((prev) => ({
+      ...prev, [name]: value
+    }))
   }
 
   return isFirstStep && (

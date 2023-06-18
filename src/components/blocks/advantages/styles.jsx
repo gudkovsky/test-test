@@ -11,8 +11,10 @@ export const AdvantagesWrapper = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
-  column-gap: 18px;
+  justify-content: space-between;
   align-items: center;
+  column-gap: 18px;
+  max-width: 350px;
 `
 
 export const Delete = styled.button`
