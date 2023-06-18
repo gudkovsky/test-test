@@ -11,7 +11,6 @@ export default function RadioGroup() {
 
   const handleChange = function (e) {
     const {name, value} = e.target
-
     setRadiolist(value)
     setFormData((prev) => ({
        ...prev, [name]: value

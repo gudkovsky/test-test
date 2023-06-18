@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const RadioWrapper = styled.form`
+export const RadioWrapper = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 2px;

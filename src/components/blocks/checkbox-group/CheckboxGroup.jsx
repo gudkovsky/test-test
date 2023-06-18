@@ -28,9 +28,6 @@ export default function CheckboxGroup() {
     }));
   }
 
-
-
-console.log(formData);
   return (
     <CheckboxWrapper>
       <InputName>Checkbox group</InputName>

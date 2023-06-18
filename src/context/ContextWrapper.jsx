@@ -15,12 +15,18 @@ export default function ContextWrapper(props) {
       checkbox: '',
       radio: '',
       about: ''
-    }
-  )
+    })
+
+  const [loginData, setLoginData] = useState({
+    phone: '',
+    email: ''
+  })
+
+  const [modalError, showModalError] = useState(false)
 
   return (
     <GlobalContext.Provider value={{
-      firstStep, setFirstStep, secondStep, setSecondStep, thirdStep, setThirdStep, formData, setFormData
+      firstStep, setFirstStep, secondStep, setSecondStep, thirdStep, setThirdStep, formData, setFormData, loginData, setLoginData, modalError, showModalError
     }}>
       {props.children}
     </GlobalContext.Provider>

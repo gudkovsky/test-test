@@ -31,7 +31,7 @@ export default function Advantages() {
     dataCopy[i] = value
 
     setFormData((prev) => ({
-  ...prev, advantages: dataCopy
+    ...prev, advantages: dataCopy
     }))
   }
 
@@ -54,7 +54,7 @@ export default function Advantages() {
           </Row>
         )})
       }
-      <AddButton onClick={handleAddAdvantage}>+</AddButton>
+      <AddButton type='button' onClick={handleAddAdvantage}>+</AddButton>
     </AdvantagesWrapper>
   )
 }

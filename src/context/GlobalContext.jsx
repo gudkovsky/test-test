@@ -8,8 +8,11 @@ const GlobalContext = React.createContext({
   thirdStep: false,
   setThirdStep: () => {},
   formData: {},
-  setFormData: () => {}
-  // formData: [] сюда нужно будет закидывать все данные из форм
+  setFormData: () => {},
+  loginData: {},
+  setLoginData: () => {},
+  modalError: false,
+  showModalError: () => {}
 })
 
 export default GlobalContext

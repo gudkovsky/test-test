@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import StyledButton from '../../elements/button/Button.jsx'
-import MaskedInput from 'react-input-mask';
+import { InputMask } from 'primereact/inputmask'
 
-export const Main = styled.main`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   row-gap: 24px;
@@ -13,7 +13,7 @@ export const Button = styled(StyledButton)`
   margin-top: 48px;
 `
 
-export const StyledInput = styled(MaskedInput)`
+export const StyledInput = styled(InputMask)`
   display: flex;
   height: auto;
   width: 45%;
