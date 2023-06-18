@@ -1,26 +1,22 @@
-import React from 'react'
-import {FormWrapper, ButtonsWrapper} from './styles.jsx'
-import FormHeader from '../../blocks/form-header/FormHeader.jsx'
+import React , { useState, useContext } from 'react'
 import FormMain from '../../blocks/form-main/FormMain.jsx'
-import StyledButton from '../../elements/button/Button.jsx'
 import FormSecond from '../../blocks/form-second/FormSecond.jsx'
 import FormThird from '../../blocks/form-third/FormThird.jsx'
 import Modal from '../../blocks/modal/Modal.jsx'
 import ModalError from '../../blocks/modal-error/ModalError.jsx'
+import GlobalContext from '../../../context/GlobalContext.jsx'
 
-export default function FormPage({FormPageShown}) {
-  return FormPageShown && (
-    <FormWrapper>
-      <FormHeader />
-      <FormMain />
-      <FormSecond/>
-      <FormThird/>
-      <ButtonsWrapper>
-        <StyledButton $next={false}>Назад</StyledButton>
-        <StyledButton $next={true}>Далее</StyledButton>
-      </ButtonsWrapper>
+export default function FormPage() {
+  const {firstStep, secondStep, thirdStep} = useContext(GlobalContext)
+
+  return (
+    <>
+      <FormMain isFirstStep={firstStep}/>
+      <FormSecond isSecondStep={secondStep}/>
+      <FormThird isThirdStep={thirdStep}/>
+
       <Modal isShow={false}/>
-      <ModalError isShow={true}/>
-    </FormWrapper>
+      <ModalError isShow={false}/>
+    </>
   )
 }

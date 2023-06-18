@@ -23,7 +23,7 @@ export const CheckSpan = styled.span`
   border-radius: 4px;
 
   ${HiddenInput}:checked + & {
-    background-color: ${(props) => props.theme.grayBorder};
+    background-color: ${(props) => props.theme.bluePrimary};
     background-image: url(${checkmark});
     background-position: center;
     background-repeat: no-repeat;

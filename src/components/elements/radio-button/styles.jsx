@@ -22,7 +22,7 @@ export const RadioSpan = styled.span`
   border-radius: 50%;
 
   ${HiddenInput}:checked + & {
-    background-color: ${(props) => props.theme.grayBorder};
+    background-color: ${(props) => props.theme.bluePrimary};
     outline: 2px solid white;
     outline-offset: -4px;
   }

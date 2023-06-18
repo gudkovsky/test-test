@@ -1,16 +1,19 @@
 import React from "react";
 import { Label, HiddenInput, CheckSpan } from "./styles.jsx";
 
-export default function Checkbox({children}) {
+export default function Checkbox({children, checked, onChange, value}) {
 
   return (
     <Label>
       <HiddenInput
         type="checkbox"
-        value={children}
+        value={value}
+        checked={checked}
+        name="checkbox"
+        onChange={onChange}
       ></HiddenInput>
       <CheckSpan />
-      {children}
+      {value}
     </Label>
   );
 }

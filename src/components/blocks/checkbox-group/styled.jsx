@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CheckboxWrapper = styled.div`
+export const CheckboxWrapper = styled.form`
   display: flex;
   flex-direction: column;
   row-gap: 2px;

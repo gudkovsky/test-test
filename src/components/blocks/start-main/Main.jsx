@@ -18,7 +18,7 @@ export default function Main() {
         <Input type='email' placeholder='tim.jennings@example.com'/>
       </Label>
  
-      <Button $next={true}>Начать</Button>
+      <Button to='/create' $next={true} style={{alignSelf: 'flex-start'} }>Начать</Button>
     
     </StyledMain>
   )

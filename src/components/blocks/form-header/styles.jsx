@@ -1,6 +1,5 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import check from '../../../assets/check.png'
-import current from '../../../assets/currentStep.svg'
 
 export const ProgressRange = styled.div`
   position: relative;
@@ -8,15 +7,34 @@ export const ProgressRange = styled.div`
   width: 100%;
   max-width: 680px;
   margin-bottom: 102px;
+  border-radius: 5px;
   background-color: ${(props) => props.theme.grayProgress};
 `
 
 export const ProgressBar = styled.div`
   position: absolute;
   height: 100%;
-  left: 0;
   top: 0;
+  left: 0;
+  right: ${props => props.$isFirstStep ? '100%' : props.$isSecondStep ? '50%' : props.$isThirdStep ? '0' : ''};
   background-color: ${(props) => props.theme.bluePrimary};
+  transition: 2s;
+  transition-timing-function: ease-in-out;
+  border-radius: 5px;
+  /* ${(props) => 
+    props.isFirstStep ? (
+      css`
+        right: 100%;
+      }`) : 
+    props.isSecondStep ? (
+      css`
+        right: 50%;
+      }`) :
+    props.isThirdStep ? (
+      css`
+        right: 0;
+      }`) :  ''
+ } */
 `
 
 const Step = styled.span`
@@ -29,17 +47,30 @@ const Step = styled.span`
   height: 16px;
   border-radius: 50%;
 
-  background-color: ${(props) => props.isDone ? props.theme.bluePrimary : props.isCurrent ? props.theme.bluePrimary : props.theme.grayStep};
-  background-image: ${(props) => props.isDone ? `url(${check})` : props.isCurrent ? `url(${current})` : 'none'};
+  background-color: ${(props) => props.$isDone ? props.theme.bluePrimary : props.$isCurrent ? props.theme.bluePrimary : props.$isDisabled ? props.theme.grayStep : 'gray'};
+  background-image: ${(props) => props.$isDone ? `url(${check})` : 'none'};
   background-repeat: no-repeat;
   background-position: center;
-  background-size: fill;
+
+  ${(props) => 
+    props.$isCurrent ? (
+      css`
+        &::before {
+        content: '';
+        position: static;
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: ${props => props.theme.whitePrimary};
+      }`) : ''
+ }
 
   &::after {
     position: absolute;
     bottom: -28px;
     font-weight: 600;
-    color: ${(props) => props.isDone ? props.theme.bluePrimary : props.isCurrent ? props.theme.bluePrimary : props.theme.grayStep};
+    color: ${(props) => props.$isDone ? props.theme.bluePrimary : props.$isCurrent ? props.theme.bluePrimary : props.theme.grayStep};
   }
 `
 
