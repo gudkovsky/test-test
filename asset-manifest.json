@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/test-test/static/css/main.6339b5c2.css",
-    "main.js": "/test-test/static/js/main.16435b8b.js",
+    "main.js": "/test-test/static/js/main.93c923fa.js",
     "index.html": "/test-test/index.html",
     "static/media/drop-chevron.svg": "/test-test/static/media/drop-chevron.9123423a0602e640c99c929ec1413ca8.svg",
     "main.6339b5c2.css.map": "/test-test/static/css/main.6339b5c2.css.map",
-    "main.16435b8b.js.map": "/test-test/static/js/main.16435b8b.js.map"
+    "main.93c923fa.js.map": "/test-test/static/js/main.93c923fa.js.map"
   },
   "entrypoints": [
     "static/css/main.6339b5c2.css",
-    "static/js/main.16435b8b.js"
+    "static/js/main.93c923fa.js"
   ]
 }
