@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="">
+        <Route path="/">
           <Route index element={<StartPage />}/>
           <Route path="/create" element={<LayoutForm />}>
             <Route index element={<FormPage/>}/>
