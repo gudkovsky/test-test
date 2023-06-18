@@ -9,7 +9,7 @@ import StyledButton from '../../elements/button/Button.jsx'
 export default function FormThird({isThirdStep}) {
   const {setThirdStep, setSecondStep, formData, setFormData} = useContext(GlobalContext)
   const [about, setAbout] = useState('' + formData.about)
-  console.log(about)
+  const [symbols, setSymbols] = useState(0)
 
   const handleChange = (evt) => {
     console.log('About changed')
@@ -17,6 +17,12 @@ export default function FormThird({isThirdStep}) {
     setFormData((prev) => {
       return { ...prev, about: about}
     })
+  }
+
+  const handleTextareaChange = (event) => {
+    const value = event.target.value;
+    const characterCount = value.replace(/\s+/g, '').length;
+    setSymbols(characterCount)
   }
 
   const handlePrevStep = () => {
@@ -36,8 +42,10 @@ export default function FormThird({isThirdStep}) {
         onChange={(e)=> {
         console.log(about)
         handleChange(e)
+        handleTextareaChange(e)
       }}></Textarea>
-      <Tip>Tip</Tip>
+      <Tip>Max count: 200</Tip>
+      <Tip>Currentcount:  {symbols}</Tip>
 
       <ButtonsWrapper>
         <StyledButton as='button' type='button' $next={false} onClick={handlePrevStep}>Назад</StyledButton>
